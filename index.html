@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="legal">
+<head>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container" ng-controller="BiblioController">
+    <div class='navbar'>
+            <div class='container'>
+                <button class="btn btn-primary top-buttons" >About Us</button>
+                <button class="btn btn-default top-buttons" >DONATE</button>
+                <form class="navbar-form pull-right">
+                    <input type="text" placeholder="Login">
+                    <input type="text"  placeholder="Password">
+                    <input type="submit" value="Login" class="btn btn-primary"/>
+                    <input type="submit" value="Register" class="btn btn-success"/>
+
+                </form>
+
+        </div>
+    </div>
+<div class="left">
+
+
+
+
+    <div class="btn-group-vertical vertical-buttons">
+        <button class="btn btn-primary">Case</button>
+        <button class="btn btn-primary">Legislation</button>
+        <button class="btn btn-primary">Journal</button>
+        <button class="btn btn-primary">Extrinsic Material</button>
+        <button class="btn btn-primary">Other</button>
+    </div>
+
+    <div class="biblio-center panel panel-default">
+        <h4>BIBLIOGRAPHY</h4>
+        <p>{{data.author}}, from {{data.journal}}</p>
+        <p>the {{data.name}} in {{data.year}}</p>
+        <article>Articles/books/reports</article>
+
+        <article> Cases</article>
+
+        <article>Legislation/Constitution</article>
+        <p></p>
+        <article>Other</article>
+
+        <br>
+    </div>
+
+</div>
+<div class="right">
+    <p style="font-size:16px;margin-top:14px">CASE INFORMATION</p>
+    <form role="form">
+        <div class="form-group">
+            Author: <input type="text" class="form-control" ng-model="data.author" placeholder="Enter Author">
+        </div>
+        <div class="form-group">
+            Journal <input type="text" class="form-control" ng-model="data.journal" placeholder="Enter Journal Name">
+        </div>
+        <div class="form-group">
+            Article Name <input type="text" class="form-control" ng-model="data.name" placeholder="Enter Article Name">
+        </div>
+        <div class="form-group">
+            Article Name <input type="number" class="form-control" ng-model="data.year" placeholder="Enter Year">
+        </div>
+
+
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/app.js"></script>
+</body>
+<!--<script src="js/ui-bootstrap-tpls-0.9.0.min.js"></script>--/!>
